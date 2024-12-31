@@ -51,26 +51,11 @@ N, the size of the surface-area, dominates the complexity of the change as compl
 1. Test from the Outside: start at the highest module level and verify the product requirements are met.
 2. Drill down only when necessary. If the highest-level requirement validation becomes difficult, then drill down one tier to the next level of modules and write tests for one or more of them.
 
-### Key Concepts
+**Automated Testing**
 
-1. **Good Requirements**:
-   - Define problems, not solutions.
-   - Include measurable validation criteria.
-   - Form a hierarchical tree of sub-problems and solutions.
-2. **Testing**:
-   - Always test modules from the outside, focusing on interfaces.
-   - Start at the highest module level and drill down only when necessary.
-   - Modular testing replaces unit testing by treating modules as the unit.
-3. **Static Typing**:
-   - Static typing catches at most ~10% of errors but significantly reduces productivity.
-   - Invest in robust test suites (~30% effort) instead of relying on static typing.
-4. **Integration Testing**:
-   - Use Docker containers to emulate external services when possible.
-   - Avoid mocking and dependency injection due to their complexity and brittleness.
-   - Utilize a **test harness** to capture and replay real-world responses for external service calls.
-5. **Pure Functions**:
-   - Separate functional logic from integrations for easier testing and modular design.
-   - Apply this principle to testing user interfaces by isolating logic from direct interactions.
+- Always test modules from the outside, focusing on interfaces.
+- Start at the highest module level and drill down only when necessary.
+- Modular testing replaces unit testing by treating modules as the unit.
 
 ## Testing Benefits
 
@@ -78,5 +63,3 @@ N, the size of the surface-area, dominates the complexity of the change as compl
 - Drives better modular design and cleaner code.
 - Enables confident, fast changes and supports semantic versioning.
 - Maintains agility while ensuring verifiability with minimal overhead (~30% effort).
-
-**Conclusion**: Combining agility and verifiability creates a robust, adaptable system capable of meeting requirements efficiently and reliably while remaining easy to evolve and maintain.
